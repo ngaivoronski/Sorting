@@ -13,6 +13,8 @@ def merge( arrA, arrB ):
 
 # TO-DO: implement the Merge Sort function below USING RECURSION
 def merge_sort( arr ):
+    if len(arr) == 0:
+        return []
     # TO-DO
     list_of_arrs = [arr]
 
@@ -27,6 +29,8 @@ def merge_sort( arr ):
                 new_list_of_arrs.append(left)
                 new_list_of_arrs.append(right)
                 splits += 1
+            else:
+                new_list_of_arrs.append(i)
         if splits == 0:
             break
         else:
